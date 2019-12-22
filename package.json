@@ -1,0 +1,27 @@
+{
+  "name": "c09-project",
+  "version": "1.0.0",
+  "description": "For Winter 2020",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:frontend": "cd frontend; npm run test",
+    "test:backend": "cd backend; npm run test",
+    "build": "npm run build:frontend && npm run build:backend",
+    "build:frontend": "cd frontend; npm run build",
+    "build:backend": "cd backend; npm run build",
+    "lint": "npm run lint:frontend && npm run lint:backend",
+    "lint:frontend": "prettier --write 'frontend/**/*.scss' 'frontend/**/*.js' 'frontend/**/*.jsx'",
+    "lint:backend": "prettier --write 'backend/**/*.js'"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "husky": "^3.1.0",
+    "prettier": "^1.19.1"
+  }
+}
